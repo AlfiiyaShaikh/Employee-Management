@@ -20,7 +20,7 @@ const addEmp = async (req, res) => {
       await data.save();
       res.redirect("/");
     } catch (error) {
-      res.status(400).json({ error: error.message });
+       res.status(500).render("error", { message: error.message });
     }
   } else {
     res.redirect("/?error=empty");
@@ -37,7 +37,7 @@ const updateEmp = async (req, res) => {
 
     res.redirect("/");
   } catch (error) {
-    res.status(400).json({ error: error.message });
+     res.status(500).render("error", { message: error.message });
   }
 };
 
@@ -46,7 +46,7 @@ const deleteEmp = async (req, res) => {
     const result = await empModel.findByIdAndDelete({ _id: req.params._id });
     res.redirect("/");
   } catch (error) {
-    res.status(400).json({ error: error.message });
+     res.status(500).render("error", { message: error.message });
   }
 };
 
