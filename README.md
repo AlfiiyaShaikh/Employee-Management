@@ -52,8 +52,8 @@ Employee-Management/
 ### 🔹 Edit Employee Form
 ![Edit Form](./screenshots/EditPage.png)
 
-### 🔹 Validation Alert Example
-![Alert](./screenshots/Error.png)
+### 🔹 Error Page
+![Error Page](./screenshots/Error.png)
 
 
 
